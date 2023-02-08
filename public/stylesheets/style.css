@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font-family: 'Abril Fatface', cursive;
+  background-color: #e87eb3;
+  color: rgba(255, 255, 120, 0.898);
+  text-align: center;
+}
+
+#logo {
+  font-size: 100px;
+}
+
+a {
+  color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* body {
+    width: 390px;
+  } */
+  
+}
