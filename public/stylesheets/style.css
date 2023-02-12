@@ -8,6 +8,11 @@ body {
 
 #logo {
   font-size: 100px;
+  margin-bottom: 70px;
+}
+
+#tasks-heading {
+  font-size: 80px;
 }
 
 a {

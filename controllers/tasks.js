@@ -8,7 +8,14 @@ function index (req, res) {
   })
 }
 
+// this controller function is the first part to creating a new task
+
+function newTask (req, res) {
+  res.render('tasks/new')
+}
+
 
 export { 
-  index 
+  index,
+  newTask as new
 }
