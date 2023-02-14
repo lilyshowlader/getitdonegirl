@@ -1,8 +1,8 @@
 body {
   padding: 50px;
   font-family: 'Abril Fatface', cursive;
-  background-color: #e87eb3;
-  color: rgba(255, 255, 120, 0.898);
+  background-color: #eb8abb;
+  color: rgba(251, 251, 154, 0.898);
   text-align: center;
 }
 
@@ -13,10 +13,31 @@ body {
   
 }
 
-#tasks-heading {
+.heading {
   font-size: 80px;
   font-family: 'Abril Fatface', cursive;
 }
+
+.heading-two {
+  font-size: 80px;
+  color:#e87eb3;
+}
+
+.heading-three {
+  font-size: 80px;
+}
+
+.tasks-font {
+  color:#e87eb3;
+}
+
+.page-2 {
+  background-color: rgb(250, 221, 235);
+}
+
+/* .page-3 {
+  background-color: yellow;
+} */
 
 a {
   color: white;
