@@ -5,17 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
   <title> get it done girl</title>
 </head>
 <body>
   <p id="tasks-heading">tasks</p>
   <ul>
-    <% tasks.forEach(task => { %>
+    <% tasks.forEach(function(task) { %>
       <li>
-				<%= task.text %> 
-				- 
-				<%= task.done ? 'done' : 'not done' %>
-			</li>
+        <a href="/tasks/<%= task._id %>"><%= task.text %></a>
+          - 
+        <%= task.done ? 'done' : 'not done' %>
+      </li>
     <% }) %>
   </ul>
   <a href='tasks/new'> new </a> 

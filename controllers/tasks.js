@@ -10,14 +10,11 @@ function index(req, res) {
       time: req.time
     })
   })
-  .catch(error => { // If there's an error, console.log it and redirect back home!
+  .catch(error => { 
     console.log(error)
     res.redirect('/')
   })
 }
-// above [{}] -> stands for find ALL documents. if you pass something into the object, it acts like a filter. since there is nothing in there, nothing is being filtered
-
-
 
 // this controller function shows the view page to create a new task
 
@@ -40,9 +37,22 @@ function create (req, res) {
   })
 }
 
-
+// this controller function handles the viewing of an individual task
+function show(req, res) {
+  Task.findById(req.params.id)
+  .then(task => {
+    res.render('tasks/show', {
+      task : task
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/tasks')
+  })
+}
 export { 
   index,
   newTask as new,
-  create
+  create,
+  show
 }
