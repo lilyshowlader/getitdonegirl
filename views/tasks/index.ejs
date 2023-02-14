@@ -11,16 +11,18 @@
 </head>
 <body class="page-2">
   <p class="heading-two">tasks</p>
-  <ul class="tasks-font">
-    <% tasks.forEach(function(task) { %>
-      <li>
-        <a href="/tasks/<%= task._id %>"><%= task.text %></a>
-          - 
-        <%= task.done ? 'done' : 'not done' %>
-      </li>
-    <% }) %>
-  </ul>
-  <a href='tasks/new'> new </a> 
+  <div class="task-container">
+    <ul class="tasks-font">
+      <% tasks.forEach(function(task) { %>
+        <li>
+          <a href="/tasks/<%= task._id %>"><%= task.text %></a>
+            - 
+          <%= task.done ? 'done' : 'not done' %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  <a href='tasks/new' class="button"> new </a> 
   <script src="colors.js"></script>
 </body>
 </html>
