@@ -50,9 +50,21 @@ function show(req, res) {
     res.redirect('/tasks')
   })
 }
+
+// this controller function handles deleting an individual task
+function deleteTask (req, res) {
+  Task.findById(req.params.id)
+  .then(task => {
+    task.delete()
+    .then(() => {
+      res.redirect('/tasks')
+    })
+  })
+}
 export { 
   index,
   newTask as new,
   create,
-  show
+  show, 
+  deleteTask as delete,
 }

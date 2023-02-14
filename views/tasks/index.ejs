@@ -18,6 +18,9 @@
           <a href="/tasks/<%= task._id %>"><%= task.text %></a>
             - 
           <%= task.done ? 'done' : 'not done' %>
+          <form method="POST" action="/tasks/<%= task._id %>?_method=DELETE">
+            <button type="submit">Delete</button>
+          </form>
         </li>
       <% }) %>
     </ul>

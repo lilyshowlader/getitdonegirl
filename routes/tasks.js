@@ -10,5 +10,7 @@ router.get('/new',tasksCtrl.new)
 router.post('/', tasksCtrl.create)
 // GET localhost:3000/tasks/:id (show individual task details)
 router.get('/:id', tasksCtrl.show)
+// DELETE 3000/tasks/:id -> to delete individual task
+router.delete('/:id', tasksCtrl.delete)
 
 export { router }
