@@ -1,6 +1,6 @@
 body {
   font-family: 'Abril Fatface', cursive;
-  background-color: #eb8abb;
+  background-color: #e99ac1;
   color: rgba(251, 251, 154, 0.898);
   text-align: center;
   display: flex;
@@ -46,7 +46,7 @@ body {
 } */
 
 a {
-  color: white;
+  color: #e87eb3;
 }
 
 form input,

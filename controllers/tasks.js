@@ -9,12 +9,13 @@ function index(req, res) {
       tasks: tasks,
       time: req.time
     })
+    console.log(tasks)
   })
   .catch(error => { 
     console.log(error)
     res.redirect('/')
   })
-}
+}  
 
 // this controller function shows the view page to create a new task
 
@@ -61,10 +62,26 @@ function deleteTask (req, res) {
     })
   })
 }
+
+function edit (req, res) {
+  Task.findById(req.params.id)
+  .then(task => {
+    res.render('tasks/edit', {
+      task : task
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/tasks')
+  })
+}
+
+
 export { 
   index,
   newTask as new,
   create,
   show, 
   deleteTask as delete,
+  edit, 
 }
