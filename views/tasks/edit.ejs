@@ -12,8 +12,15 @@
 <body>
   <p class="heading-three">edit task</p>
   <p><%= task.text %></p>
-  <form id="edit-form" action="tasks/<%= task._id %>?_method=PUT" method="POST">
-    <input type="text" name="text">
+  <form id="edit-form" action="/tasks/<%= task._id %>?_method=PUT" method="POST">
+    <input type="text" name="text" value="<% task.text %>">
+    <input 
+      type="checkbox"
+      name="done"
+      value="true"
+      <%= task.done ? 'complete' : 'get on it, love' %>
+      id="checkbox"
+    >
     <button type="submit">save</button>
   </form>
 </body>

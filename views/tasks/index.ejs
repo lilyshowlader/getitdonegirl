@@ -17,7 +17,7 @@
         <li>
           <a href="/tasks/<%= task._id %>"><%= task.text %></a>
             - 
-          <!-- <%= task.done ? 'done' : 'not done' %> -->
+          <%= task.done ? 'done' : 'get on it, love' %>
           <a href="/tasks/<%= task._id %>/edit">edit</a>
           <form method="POST" action="/tasks/<%= task._id %>?_method=DELETE">
             <button type="submit">x</button>
