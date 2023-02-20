@@ -12,21 +12,15 @@
 <body class="page-2">
   <div class="task-container white-bg">
     <p class="heading-two">tasks</p>
-    <ul class="tasks-font">
       <% tasks.forEach(function(task) { %>
-        <li>
           <a href="/tasks/<%= task._id %>"><%= task.text %></a>
-            - 
-          <%= task.done ? 'done' : 'get on it, love' %>
           <div className="task-items-container">
           <a href="/tasks/<%= task._id %>/edit"class="edit-link" style="display: inline-block; ">edit</a>
           <form method="POST" action="/tasks/<%= task._id %>?_method=DELETE" style="display: inline-block;">
             <button type="submit">x</button>
           </form>
           </div>
-        </li>
       <% }) %>
-    </ul>
   </div>
   <a href='tasks/new' class="button"> new </a> 
   <script src="colors.js"></script>

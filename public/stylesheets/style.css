@@ -77,6 +77,13 @@ input[type="text"] {
   margin-top: 70px;
 }
 
+a:hover {
+  color: pink;
+}
+.animate__animated.animate__flash {
+  --animate-duration: 2s;
+}
+
 .button {
   text-decoration: none;
   background-color:  black;
@@ -132,6 +139,7 @@ button {
   padding-top: 0px;
   border-radius: 10%;
   width: 300px;
+  margin: 0 auto;
 }
 
 
@@ -141,6 +149,12 @@ button {
 
 .task-items-container {
   display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -157,5 +171,6 @@ button {
 
   .new-container {
     padding-top: 0px;
+    padding: 35px;
   }
 }

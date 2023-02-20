@@ -15,14 +15,6 @@
   <p><%= task.text %></p>
   <form id="edit-form" action="/tasks/<%= task._id %>?_method=PUT" method="POST">
     <input type="text" name="text" value="<% task.text %>">
-    <p>completed?</p>
-    <input 
-      type="checkbox"
-      name="done"
-      value="true"
-      <%= task.done ? 'complete' : 'get on it, love' %>
-      id="checkbox"
-    >
     <button type="submit">save</button>
   </form>
 </div>
